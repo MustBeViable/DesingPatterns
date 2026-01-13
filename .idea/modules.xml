@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/DesingPatterns.iml" filepath="$PROJECT_DIR$/DesingPatterns.iml" />
+      <module fileurl="file://$PROJECT_DIR$/FactoryModel/FactoryModel.iml" filepath="$PROJECT_DIR$/FactoryModel/FactoryModel.iml" />
+    </modules>
+  </component>
+</project>
