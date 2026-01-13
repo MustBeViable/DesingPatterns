@@ -5,8 +5,12 @@ import tiles.*;
 import java.util.Random;
 
 public class WildernessMap extends Map {
+    private final Random random = new Random();
 
-    Random random = new Random();
+    public WildernessMap(int rows, int cols) {
+        super(rows, cols);
+    }
+
     @Override
     Tile createTile() {
 

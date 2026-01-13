@@ -20,6 +20,7 @@ public class Game {
                 }
                 if (userInput == 1 || userInput == 2) {
                     map = createMap(userInput);
+                    map.generate();
                 }
             } while (userInput != 1 && userInput != 2 && userInput !=3);
             map.display();
@@ -29,9 +30,9 @@ public class Game {
 
     public static Map createMap(int mapType) {
         if (mapType == 1) {
-            return new CityMap();
+            return new CityMap(3,3);
         } else if (mapType == 2) {
-            return new WildernessMap();
+            return new WildernessMap(3,3);
         }
         throw new RuntimeException("Should not do this");
     }

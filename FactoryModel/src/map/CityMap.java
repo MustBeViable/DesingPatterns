@@ -8,7 +8,12 @@ import tiles.Tile;
 import java.util.Random;
 
 public class CityMap extends Map {
-    Random random = new Random();
+    private final Random random = new Random();
+
+    public CityMap(int rows, int cols) {
+        super(rows, cols);
+    }
+
     @Override
     Tile createTile() {
         int tile = random.nextInt(3);
