@@ -14,7 +14,7 @@ public class Game {
                 System.out.print("Give a number 1 for city map or 2 for wilderness map. " +
                         "Give 3 to finish game: ");
                 userInput = scanner.nextInt();
-                if (userInput != 1 && userInput != 2 && userInput !=3) {
+                if (userInput != 1 && userInput != 2 && userInput != 3) {
                     System.out.println("Enter only 1, 2 or 3 to exit game");
                     continue;
                 }
@@ -22,7 +22,7 @@ public class Game {
                     map = createMap(userInput);
                     map.generate();
                 }
-            } while (userInput != 1 && userInput != 2 && userInput !=3);
+            } while (userInput != 1 && userInput != 2 && userInput != 3);
             map.display();
             System.out.println();
         } while (userInput != 3);
@@ -30,9 +30,9 @@ public class Game {
 
     public static Map createMap(int mapType) {
         if (mapType == 1) {
-            return new CityMap(3,3);
+            return new CityMap(3, 3);
         } else if (mapType == 2) {
-            return new WildernessMap(3,3);
+            return new WildernessMap(3, 3);
         }
         throw new RuntimeException("Should not do this");
     }
