@@ -8,12 +8,12 @@ public class ForestTile extends Tile {
     }
 
     @Override
-    String getType() {
+    public String getType() {
         return "forest";
     }
 
     @Override
-    void action() {
+    public void action() {
 
     }
 }

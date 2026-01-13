@@ -7,12 +7,12 @@ public class WaterTile extends Tile {
     }
 
     @Override
-    String getType() {
+    public String getType() {
         return "water";
     }
 
     @Override
-    void action() {
+    public void action() {
 
     }
 }

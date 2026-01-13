@@ -5,10 +5,10 @@ import map.WildernessMap;
 import java.util.Scanner;
 
 public class Game {
-
-    public void main() {
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int userInput;
+        Map map = null;
         do {
             do {
                 System.out.print("Give a number 1 for city map or 2 for wilderness map. " +
@@ -16,21 +16,23 @@ public class Game {
                 userInput = scanner.nextInt();
                 if (userInput != 1 && userInput != 2 && userInput !=3) {
                     System.out.println("Enter only 1, 2 or 3 to exit game");
+                    continue;
+                }
+                if (userInput == 1 || userInput == 2) {
+                    map = createMap(userInput);
                 }
             } while (userInput != 1 && userInput != 2 && userInput !=3);
-            createMap(userInput);
+            map.display();
             System.out.println();
         } while (userInput != 3);
     }
 
-    public void createMap(int mapType) {
-        Map map;
+    public static Map createMap(int mapType) {
         if (mapType == 1) {
-            map = new CityMap();
-            map.display();
+            return new CityMap();
         } else if (mapType == 2) {
-            map = new WildernessMap();
-            map.display();
+            return new WildernessMap();
         }
+        throw new RuntimeException("Should not do this");
     }
 }

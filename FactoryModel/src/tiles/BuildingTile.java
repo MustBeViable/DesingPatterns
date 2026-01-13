@@ -7,12 +7,12 @@ public class BuildingTile extends Tile {
     }
 
     @Override
-    String getType() {
+    public String getType() {
         return "building";
     }
 
     @Override
-    void action() {
+    public void action() {
 
     }
 }

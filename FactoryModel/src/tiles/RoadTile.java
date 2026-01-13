@@ -7,12 +7,12 @@ public class RoadTile extends Tile {
     }
 
     @Override
-    String getType() {
+    public String getType() {
         return "road";
     }
 
     @Override
-    void action() {
+    public void action() {
 
     }
 }

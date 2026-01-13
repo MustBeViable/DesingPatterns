@@ -7,12 +7,12 @@ public class SwampTile extends Tile {
     }
 
     @Override
-    String getType() {
+    public String getType() {
         return "swamp";
     }
 
     @Override
-    void action() {
+    public void action() {
 
     }
 }
