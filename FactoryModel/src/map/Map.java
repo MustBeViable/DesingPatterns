@@ -2,37 +2,35 @@ package map;
 
 import tiles.Tile;
 
-import java.util.Random;
-
 public abstract class Map {
-    private final int rows;
-    private final int cols;
+    private final int ROWS;
+    private final int COLS;
     protected Tile[][] tiles;
 
-    protected Map(int rows, int cols) {
-        if (rows <= 0 || cols <= 0) {
+    protected Map(int ROWS, int COLS) {
+        if (ROWS <= 0 || COLS <= 0) {
             throw new IllegalArgumentException("Map size must be positive.");
         }
-        this.rows = rows;
-        this.cols = cols;
-        this.tiles = new Tile[rows][cols];
+        this.ROWS = ROWS;
+        this.COLS = COLS;
+        this.tiles = new Tile[ROWS][COLS];
     }
 
     abstract Tile createTile();
 
     public void display() {
-        for (int r = 0; r < rows; r++) {
-            for (int c = 0; c < cols; c++) {
+        for (int r = 0; r < ROWS; r++) {
+            for (int c = 0; c < COLS; c++) {
                 System.out.print(tiles[r][c].getCharacter());
-                if (c < cols - 1) System.out.print(' ');
+                if (c < COLS - 1) System.out.print(' ');
             }
             System.out.println();
         }
     }
 
     public void generate() {
-        for (int r = 0; r < rows; r++) {
-            for (int c = 0; c < cols; c++) {
+        for (int r = 0; r < ROWS; r++) {
+            for (int c = 0; c < COLS; c++) {
                 tiles[r][c] = createTile();
             }
         }

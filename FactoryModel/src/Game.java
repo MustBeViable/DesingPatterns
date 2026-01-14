@@ -5,6 +5,10 @@ import map.WildernessMap;
 import java.util.Scanner;
 
 public class Game {
+
+    private static final int ROWS = 9;
+    private static final int COLS = 9;
+
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int userInput;
@@ -30,9 +34,9 @@ public class Game {
 
     public static Map createMap(int mapType) {
         if (mapType == 1) {
-            return new CityMap(3, 3);
+            return new CityMap(ROWS, COLS);
         } else if (mapType == 2) {
-            return new WildernessMap(3, 3);
+            return new WildernessMap(ROWS, COLS);
         }
         throw new RuntimeException("Should not do this");
     }
