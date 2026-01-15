@@ -1,9 +1,6 @@
 package components.abstracts;
 
 public abstract class UIFactory {
-    public Button button;
-    public Checkbox checkbox;
-    public TextField textField;
 
     public Element[] generate(String text) {
         Element[] array = new Element[3];

@@ -4,11 +4,11 @@ import components.abstracts.TextField;
 
 public class TextFieldB extends TextField {
 
-    private final String text;
+
     private final char uniqueMarker;
 
     TextFieldB(String text, char uniqueMarker) {
-        this.text = text;
+        super(text);
         this.uniqueMarker = uniqueMarker;
     }
     @Override

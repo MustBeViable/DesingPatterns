@@ -4,11 +4,10 @@ import components.abstracts.TextField;
 
 public class TextFieldA extends TextField {
 
-    private final String text;
     private final char uniqueMarker;
 
     TextFieldA(String text, char uniqueMarker) {
-        this.text = text;
+        super(text);
         this.uniqueMarker = uniqueMarker;
     }
     @Override
@@ -19,7 +18,7 @@ public class TextFieldA extends TextField {
         }
         System.out.print("*\n");
 
-        System.out.printf("|%s|\n", this.text);
+        System.out.printf("|%s|\n", super.text);
 
         System.out.print("*");
         for (int i = 0; i < 10; i++) {

@@ -4,9 +4,9 @@ import components.abstracts.Button;
 
 public class ButtonA extends Button {
     private final char uniqueMarker;
-    private final String text;
+
     ButtonA(String text, char uniqueMarker) {
-        this.text = text;
+        super(text);
         this.uniqueMarker = uniqueMarker;
     }
     @Override
@@ -17,7 +17,7 @@ public class ButtonA extends Button {
         }
         System.out.print("*\n");
 
-        System.out.printf("|%s|\n", this.text);
+        System.out.printf("|%s|\n", super.text);
 
         System.out.print("*");
         for (int i = 0; i < 10; i++) {

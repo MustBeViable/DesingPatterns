@@ -3,11 +3,10 @@ package components.concrete.b;
 import components.abstracts.Button;
 
 public class ButtonB extends Button {
-    private final String text;
     private final char uniqueMarker;
 
     ButtonB (String text, char uniqueMarker) {
-        this.text = text;
+        super(text);
         this.uniqueMarker = uniqueMarker;
     }
     @Override

@@ -8,50 +8,65 @@ import components.concrete.b.BFactory;
 import java.util.Scanner;
 
 public class Main {
+    static private boolean stop = false;
     public static void main(String[] args) {
-        char[] answer;
-        String text = null;
         Scanner scanner = new Scanner(System.in);
-        while (true) {
-            System.out.println("Do you want A or B structure for UI (A/B)?");
-            answer = scanner.nextLine().trim().toUpperCase().toCharArray();
-            if (answer[0] == 'A') {
-                break;
-            } else if (answer[0] == 'B') {
-                break;
-            } else {
-                System.out.println("Yritit syöttää: " + answer[0]);
-                System.out.println("Only A or B are viable answers.");
-            }
-        }
-        while (true) {
-            System.out.println("What text do you want to display in components? (3-6 characters)");
-            text = scanner.nextLine().trim();
-            if (text.length() >= 2 && text.length() < 7) {
-                break;
-            }
-            else {
-                System.out.println("Enter only 3-6 characters");
-            }
-        }
+        char[] answer = {'-'};
+        do {
 
-        UIFactory factory = null;
-        Element[] components = null;
+            String text = null;
 
-        switch (answer[0]) {
-            case 'A' -> {
-                factory = new AFactory();
-                components = factory.generate(text);
+            while (!stop) {
+                System.out.println("Do you want A or B structure for UI (A/B)? To end enter q ");
+                answer = scanner.nextLine().trim().toUpperCase().toCharArray();
+                System.out.println(answer[0]);
+                if (answer[0] == 'Q') {
+                    stop = true;
+                    break;
+                }
+                if (answer[0] == 'A') {
+                    break;
+                } else if (answer[0] == 'B') {
+                    break;
+                } else {
+                    System.out.println("Yritit syöttää: " + answer[0]);
+                    System.out.println("Only A or B are viable answers.");
+                }
             }
-            case 'B' -> {
-                factory = new BFactory();
-                components = factory.generate(text);
+            while (!stop) {
+                System.out.println("What text do you want to display in components? (3-6 characters). To end enter q");
+                text = scanner.nextLine().trim();
+                if (text.equals("q") || text.equals("Q")) {
+                    stop = true;
+                    break;
+                }
+                if (text.length() >= 2 && text.length() < 7) {
+                    break;
+                } else {
+                    System.out.println("Enter only 3-6 characters. To end enter q");
+                }
             }
-        }
-        for (int i = 0; i < 3; i++) {
-            System.out.println();
-            components[i].display();
-            System.out.println();
-        }
+
+            UIFactory factory = null;
+            Element[] components = null;
+
+            if (!stop) {
+                switch (answer[0]) {
+                    case 'A' -> {
+                        factory = new AFactory();
+                        components = factory.generate(text);
+                    }
+                    case 'B' -> {
+                        factory = new BFactory();
+                        components = factory.generate(text);
+                    }
+                }
+                for (int i = 0; i < 3; i++) {
+                    System.out.println();
+                    components[i].display();
+                    System.out.println();
+                }
+            }
+        } while (!stop);
     }
 }
