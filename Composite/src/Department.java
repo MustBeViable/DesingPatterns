@@ -23,9 +23,13 @@ public class Department implements Organization {
 
     @Override
     public boolean removeEmployee(String name) {
-        for (Iterator<Organization> it = childNodes.iterator(); it.hasNext(); ) {
-            Organization node = it.next();
-
+        for (Organization node : childNodes) {
+            if (node instanceof Department) {
+                boolean found = node.removeEmployee(name);
+                if (found) {
+                    return true;
+                }
+            }
             if (node.getName().equals(name) && node instanceof Employee) {
                 this.childNodes.remove(node);
                 return true;
@@ -43,12 +47,16 @@ public class Department implements Organization {
 
     @Override
     public boolean removeDepartment(String name) {
-        for (Iterator<Organization> it = childNodes.iterator(); it.hasNext(); ) {
-            Organization node = it.next();
-
+        for (Organization node : childNodes) {
             if (node.getName().equals(name) && node instanceof Department) {
                 this.childNodes.remove(node);
                 return true;
+            }
+            if (node instanceof Department) {
+                boolean found = node.removeDepartment(name);
+                if (found) {
+                    return true;
+                }
             }
         }
         return false;
@@ -61,7 +69,9 @@ public class Department implements Organization {
             if (node instanceof Department) {
                 totalSalary += node.currentSalary();
             }
-            totalSalary += node.currentSalary();
+            else {
+                totalSalary += node.currentSalary();
+            }
         }
         return totalSalary;
     }
