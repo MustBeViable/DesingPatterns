@@ -4,7 +4,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 public class Logger {
-
     static Logger logger;
     static String fileName;
     static StringBuilder data;
@@ -35,7 +34,5 @@ public class Logger {
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
-        logger = null;
     }
-
 }
