@@ -1,5 +1,5 @@
 public class EncryptedPrinter extends PrinterDecorator {
-    private static final int SHIFT = 3; // kuinka monta merkkiä siirretään
+    private static final int SHIFT = -320; // kuinka monta merkkiä siirretään
 
     public EncryptedPrinter(Printer printer) {
         super(printer);
