@@ -14,6 +14,18 @@ public class Novice extends GameState{
     }
 
     @Override
+    public void action(int action) {
+        switch (action) {
+            case (1) -> System.out.println(this.train());
+            default -> System.out.println("You need to choose a action");
+        }
+        if (player.getExp() >= 50) {
+            player.setLevel(new Intermediate(player));
+        }
+    }
+
+
+    @Override
     public String train() {
         player.setExp(player.getExp()+10);
         return player.getName() + ": Training Exp now: " + player.getExp();

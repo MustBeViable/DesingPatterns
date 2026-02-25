@@ -21,9 +21,6 @@ public class Player {
 
     public void play() {
         while (level.getLevel() != Level.master) {
-            if (this.getHp() <= 0) {
-                break;
-            }
             System.out.println("Next day.");
             System.out.println("player stats:");
             System.out.println("Name: " + this.getName());
@@ -32,22 +29,8 @@ public class Player {
             System.out.println("Exp: " + this.getExp());
             System.out.println(level.availableActions());
             int action = scanner.nextInt();
-            switch (action) {
-                case (1) -> System.out.println(level.train());
-                case (2) -> System.out.println(level.meditate());
-                case (3) -> System.out.println(level.fight());
-                default -> System.out.println("You need to choose a action");
-            }
-            if (this.getExp() >= 200) {
-                this.setLevel(new Master(this));
-            } else if (this.getExp() >= 100) {
-                this.setLevel(new Expert(this));
-            } else if (this.getExp() >= 50) {
-                this.setLevel(new Intermediate(this));
-            }
-        }
-        if (this.getHp() > 0) {
-            System.out.println("You won!");
+            level.action(action);
+            if (level.checkGame()) break;
         }
     }
 

@@ -13,6 +13,11 @@ public class Master extends GameState{
     }
 
     @Override
+    public void action(int action) {
+
+    }
+
+    @Override
     public String train() {
         player.setExp(player.getExp()+10);
         return player.getName() + ": Training. Exp now: " + player.getExp();

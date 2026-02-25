@@ -13,6 +13,19 @@ public class Intermediate extends GameState{
     }
 
     @Override
+    public void action(int action) {
+        switch (action) {
+            case (1) -> System.out.println(this.train());
+            case (2) -> System.out.println(this.meditate());
+            default -> System.out.println("You need to choose a action");
+        }
+        if (player.getExp() >= 100) {
+            player.setLevel(new Expert(player));
+        }
+
+    }
+
+    @Override
     public String train() {
         player.setExp(player.getExp()+10);
         return player.getName() + ": Training Exp now: " + player.getExp();
@@ -20,7 +33,7 @@ public class Intermediate extends GameState{
 
     @Override
     public String meditate() {
-        if (player.getHp() < 90) {
+        if (player.getHp() <= 90) {
             player.setHp(player.getHp() + 10);
             return player.getName() + ": Meditating Hp is now: " + player.getHp();
         } else if (100 > player.getHp() && player.getHp() > 90) {
