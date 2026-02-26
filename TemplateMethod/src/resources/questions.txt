@@ -1,0 +1,139 @@
+Mikä on Javan päämetodi?
+a) start
+b) run
+c) main
+d) init
+c
+
+Mikä avainsana perii luokan?
+a) implements
+b) inherits
+c) extends
+d) override
+c
+
+Mikä näistä on rajapinta Javassa?
+a) class
+b) interface
+c) enum
+d) package
+b
+
+Mikä kokoelma ei salli duplikaatteja?
+a) List
+b) ArrayList
+c) Map
+d) Set
+d
+
+Mikä on String-luokan ominaisuus?
+a) Muuttuva
+b) Säikeinen
+c) Immutable
+d) Abstrakti
+c
+
+Mikä metodi käynnistää Java-ohjelman?
+a) start()
+b) init()
+c) run()
+d) main()
+d
+
+Mikä näistä on primitiivinen tyyppi?
+a) Integer
+b) String
+c) int
+d) Array
+c
+
+Mikä operaattori vertaa arvoja?
+a) =
+b) ==
+c) !=
+d) :=
+b
+
+Mikä paketti sisältää List-luokan?
+a) java.lang
+b) java.util
+c) java.io
+d) java.net
+b
+
+Mikä rakenne toistaa kunnes ehto täyttyy?
+a) if
+b) switch
+c) for
+d) while
+d
+
+Mikä on JavaScriptin tyyppi undefined?
+a) Arvo joka tarkoittaa tyhjää merkkijonoa
+b) Muuttuja jota ei ole olemassa
+c) Muuttuja on luotu mutta sille ei ole annettu arvoa
+d) Funktio joka palauttaa null
+c
+
+Mikä näistä EI ole JavaScriptin primitiivinen tyyppi?
+a) string
+b) number
+c) boolean
+d) object
+d
+
+Mitä === operaattori tekee JavaScriptissä?
+a) Vertaa vain arvon
+b) Vertaa vain tyypin
+c) Vertaa arvon ja tyypin
+d) Muuttaa tyypin automaattisesti
+c
+
+Mikä funktio muuttaa JSON-merkkijonon JavaScript-olioksi?
+a) JSON.stringify
+b) JSON.parse
+c) parseJSON
+d) toObject
+b
+
+Mikä näistä luo uuden taulukon ilman alkuarvoja?
+a) []
+b) {}
+c) new Object()
+d) null
+a
+
+Mikä metodi lisää alkion taulukon loppuun?
+a) pop()
+b) shift()
+c) push()
+d) unshift()
+c
+
+Mikä on arrow functionin oikea syntaksi?
+a) function => () {}
+b) () => {}
+c) => function {}
+d) function() -> {}
+b
+
+Mikä näistä on oikein määritelty const-muuttuja?
+a) const x;
+b) const x = 5;
+c) const = 5;
+d) let const x = 5;
+b
+
+Mitä event.preventDefault() tekee?
+a) Estää tapahtuman kuplimisen
+b) Estää oletustoiminnon
+c) Poistaa tapahtumankuuntelijan
+d) Käynnistää tapahtuman uudelleen
+b
+
+Mikä Array-metodi palauttaa uuden taulukon muokkaamatta alkuperäistä?
+a) forEach
+b) push
+c) splice
+d) map
+d
