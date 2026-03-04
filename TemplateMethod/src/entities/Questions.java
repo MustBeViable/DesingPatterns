@@ -42,6 +42,6 @@ public class Questions {
     }
 
     public Question getQuestion() {
-        return questions.get(random.nextInt(length-1));
+        return questions.get(random.nextInt(length));
     }
 }

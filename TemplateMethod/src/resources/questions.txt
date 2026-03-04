@@ -137,3 +137,24 @@ b) push
 c) splice
 d) map
 d
+
+Mikä on elämän tarkoitus?
+a) elää
+b) 42
+c) Ei ole
+d) kaikki ylemmät
+b
+
+Miksi kysymys on surkea?
+a) emt
+b) ehkä
+c) keksi parempi kysymys ite
+d) -
+c
+
+Miten voit ottaa 2 kapselia 3 kertaa päivässä?
+a) katson niilo22 ohjevideon
+b) otat 2 kapselia kerrallaan 3 eri ajankohtaan päivässä
+c) Kysyt äitiltä
+d) -
+a
