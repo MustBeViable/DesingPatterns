@@ -3,6 +3,7 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 .kotlin
+/Users/eliasrinne/Desktop/DesingPatterns/exam.txt
 
 ### Eclipse ###
 .apt_generated
@@ -28,3 +29,6 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+
+/Users/eliasrinne/Desktop/DesingPatterns/exam.txt

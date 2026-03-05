@@ -12,6 +12,7 @@ public class Main {
         Long start = System.currentTimeMillis();
         new Player(name, scanner).play();
         Long end = System.currentTimeMillis();
-        System.out.println("Your playtime was: " + (end - start)/1000 + "s");
+        double time = (double) (end - start)/1000;
+        System.out.println("Your playtime was: " + time + "s");
     }
 }
