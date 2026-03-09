@@ -1,0 +1,15 @@
+Nimet, idea ja käyttötarkotukset
+(essee esim tommosest)
+
+Koodaaminen/koodiesimerkkejä
+
+valmistaudu
+- yleisen rakenteen selittäminen
+- esimerkki
+
+koodaustehtävissä
+-pieniä paloja
+
+true/false kyssäreit
+
+pieniä kyssäreit
