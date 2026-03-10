@@ -1,3 +1,55 @@
+# Design Pattern -muistiinpanot
+
+## 1. Factory Method
+
+**Nimi:** Factory Method  
+**Luokka:** Creational pattern
+
+**Idea:**  
+Factory Method määrittää olioiden luontiin rajapinnan Creator-superclassissa, mutta antaa aliluokkien eli ConcreteCreatorien päättää, mikä konkreettinen Product luodaan. Client käyttää Product- ja Creator-abstraktioita eikä ole sidottu konkreettisiin luokkiin.
+
+**Käyttötarkoitus:**  
+Käytetään, kun halutaan irrottaa client konkreettisista luokista ja antaa aliluokkien päättää, minkä tyyppinen olio luodaan. Sopii tilanteisiin, joissa olioiden luonti voi vaihdella sovelluksen eri toteutuksissa.
+
+**Yleinen rakenne ja esimerkki:**
+
+- `Product` = tuotteen yhteinen rajapinta / abstract class
+- `ConcreteProduct` = tuotteen konkreettinen toteutus
+- `Creator` = määrittää factory methodin
+- `ConcreteCreator` = toteuttaa factory methodin ja palauttaa oikean tuotteen
+
+```java
+interface Product {
+    void use();
+}
+
+class Chair implements Product {
+    @Override
+    public void use() {
+        System.out.println("Using chair");
+    }
+}
+
+abstract class Creator {
+    public abstract Product createProduct();
+}
+
+class ChairCreator extends Creator {
+    @Override
+    public Product createProduct() {
+        return new Chair();
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Creator creator = new ChairCreator();
+        Product product = creator.createProduct();
+        product.use();
+    }
+}
+
+
 # Design patternit – pidempi kooste
 
 ## Singleton
