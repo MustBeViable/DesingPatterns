@@ -1,0 +1,8 @@
+memento/guistate/IMemento.class
+memento/guistate/Main.class
+memento/guistate/Controller.class
+memento/guistate/ColorBox.class
+memento/guistate/Gui.class
+memento/guistate/Model.class
+memento/guistate/HistoryWindow.class
+memento/guistate/Memento.class
