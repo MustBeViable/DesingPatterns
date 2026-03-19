@@ -80,7 +80,7 @@ public class Gui extends Application {
 
         ListView<String> listView = new ListView<>();
 
-        var history = controller.showHistory();
+        List<IMemento> history = controller.showHistory();
 
         for (int i = 0; i < history.size(); i++) {
             IMemento memento = history.get(i);
