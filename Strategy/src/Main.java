@@ -18,7 +18,7 @@ public class Main {
 
         int[] bigArray = new int[100000];
         for (int i = 0; i < bigArray.length; i++) {
-            bigArray[i] = random.nextInt(1000);
+            bigArray[i] = random.nextInt(100000);
         }
 
         List<AlgorithmInterface> algorithms = List.of(
