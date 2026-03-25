@@ -1,24 +1,28 @@
-public class Document {
-    private String data;
-    private Identifier identifier;
-    private User owner;
+import java.time.LocalDateTime;
 
-    public Document(Identifier identifier, User owner, String data) {
-        this.identifier = identifier;
-        this.owner = owner;
-        this.data = data;
+public class Document implements DocumentInterface {
+    private final String documentId;
+    private final LocalDateTime creationDate;
+    private final String content;
+
+    public Document(String documentId, String content) {
+        this.documentId = documentId;
+        this.content = content;
+        this.creationDate = LocalDateTime.now();
     }
 
-    protected Identifier getIdentifier() {
-        return identifier;
+    @Override
+    public String getContent(User user) {
+        return content;
     }
 
-
-    protected int getOwnerId() {
-        return owner.getUserId();
+    @Override
+    public LocalDateTime getCreationDate() {
+        return creationDate;
     }
 
-    protected String getData() {
-        return this.data;
+    @Override
+    public String getDocumentId() {
+        return documentId;
     }
 }
