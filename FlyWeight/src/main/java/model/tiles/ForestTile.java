@@ -1,14 +1,18 @@
 package model.tiles;
 
-public class WaterTile extends Tile {
+import javafx.scene.image.Image;
+
+import java.util.Objects;
+
+public class ForestTile extends Tile {
     @Override
     public char getCharacter() {
-        return 'W';
+        return 'F';
     }
 
     @Override
     public String getType() {
-        return "water";
+        return "forest";
     }
 
     @Override

@@ -7,7 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Memento" />
+        <module name="FlyWeight" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Flyweight" target="17" />
+    </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,6 +1,9 @@
 package model.tiles;
 
+import javafx.scene.image.Image;
+
 public class SwampTile extends Tile {
+
     @Override
     public char getCharacter() {
         return 'S';

@@ -1,8 +1,8 @@
 public interface ComputerBuilder {
-    void buildProcessor();
-    void buildRAM();
-    void buildHardDrive();
-    void buildGraphicsCard();
-    void buildOperatingSystem();
+    ComputerBuilder buildProcessor();
+    ComputerBuilder buildRAM();
+    ComputerBuilder buildHardDrive();
+    ComputerBuilder buildGraphicsCard();
+    ComputerBuilder buildOperatingSystem();
     Computer getComputer();
 }

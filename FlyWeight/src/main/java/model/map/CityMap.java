@@ -1,13 +1,16 @@
 package model.map;
 
+import javafx.scene.image.Image;
 import model.tiles.BuildingTile;
 import model.tiles.ForestTile;
 import model.tiles.RoadTile;
 import model.tiles.Tile;
 
+import java.util.Objects;
 import java.util.Random;
 
 public class CityMap extends Map {
+
     private final Random random = new Random();
 
     public CityMap(int rows, int cols) {

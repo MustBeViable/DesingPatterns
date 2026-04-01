@@ -5,6 +5,7 @@
     <option name="originalFiles">
       <list>
         <option value="$PROJECT_DIR$/Memento/pom.xml" />
+        <option value="$PROJECT_DIR$/FlyWeight/pom.xml" />
       </list>
     </option>
   </component>

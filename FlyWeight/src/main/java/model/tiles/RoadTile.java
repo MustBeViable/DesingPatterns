@@ -1,15 +1,17 @@
 package model.tiles;
 
-public class ForestTile extends Tile {
+import javafx.scene.image.Image;
+
+public class RoadTile extends Tile {
 
     @Override
     public char getCharacter() {
-        return 'F';
+        return 'R';
     }
 
     @Override
     public String getType() {
-        return "forest";
+        return "road";
     }
 
     @Override

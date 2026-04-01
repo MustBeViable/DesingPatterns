@@ -1,13 +1,16 @@
 package model.map;
 
+import javafx.scene.image.Image;
 import model.tiles.ForestTile;
 import model.tiles.SwampTile;
 import model.tiles.Tile;
 import model.tiles.WaterTile;
 
+import java.util.Objects;
 import java.util.Random;
 
 public class WildernessMap extends Map {
+
     private final Random random = new Random();
 
     public WildernessMap(int rows, int cols) {

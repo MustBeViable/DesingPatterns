@@ -6,29 +6,34 @@ public class OfficeComputerBuilder implements ComputerBuilder {
     }
 
     @Override
-    public void buildProcessor() {
+    public ComputerBuilder buildProcessor() {
         computer.setProcessor("Intel Celeron N3450");
+        return this;
     }
 
     @Override
-    public void buildRAM() {
+    public ComputerBuilder buildRAM() {
         computer.setRAM(8);
+        return this;
     }
 
     @Override
-    public void buildHardDrive() {
+    public ComputerBuilder buildHardDrive() {
         computer.setHardDriveType("SSD");
         computer.setHardDriveSize(256);
+        return this;
     }
 
     @Override
-    public void buildGraphicsCard() {
+    public ComputerBuilder buildGraphicsCard() {
         // Uses iGPU
+        return this;
     }
 
     @Override
-    public void buildOperatingSystem() {
+    public ComputerBuilder buildOperatingSystem() {
         computer.setOS("Windows 11 Pro");
+        return this;
     }
 
     @Override
