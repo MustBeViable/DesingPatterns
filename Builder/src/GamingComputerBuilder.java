@@ -7,7 +7,7 @@ public class GamingComputerBuilder implements ComputerBuilder {
 
     @Override
     public void buildProcessor() {
-        computer.setProcessor("Intel Core i9");
+        computer.setProcessor("Amd Ryzen 19 199090X4D");
     }
 
     @Override
@@ -23,12 +23,12 @@ public class GamingComputerBuilder implements ComputerBuilder {
 
     @Override
     public void buildGraphicsCard() {
-        computer.setGPU("NVIDIA RTX 4080");
+        computer.setGPU("NVIDIA RTX 6090 ti super");
     }
 
     @Override
     public void buildOperatingSystem() {
-        computer.setOS("Windows 11");
+        computer.setOS("Temple OS");
     }
 
     @Override

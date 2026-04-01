@@ -7,18 +7,18 @@ public class OfficeComputerBuilder implements ComputerBuilder {
 
     @Override
     public void buildProcessor() {
-        computer.setProcessor("Intel Core i5");
+        computer.setProcessor("Intel Celeron N3450");
     }
 
     @Override
     public void buildRAM() {
-        computer.setRAM(16);
+        computer.setRAM(8);
     }
 
     @Override
     public void buildHardDrive() {
         computer.setHardDriveType("SSD");
-        computer.setHardDriveSize(512);
+        computer.setHardDriveSize(256);
     }
 
     @Override
