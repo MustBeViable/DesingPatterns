@@ -18,21 +18,15 @@ public abstract class Map {
 
     abstract Tile createTile();
 
-    public void display() {
-        for (int r = 0; r < ROWS; r++) {
-            for (int c = 0; c < COLS; c++) {
-                System.out.print(tiles[r][c].getCharacter());
-                if (c < COLS - 1) System.out.print(' ');
-            }
-            System.out.println();
-        }
-    }
-
     public void generate() {
         for (int r = 0; r < ROWS; r++) {
             for (int c = 0; c < COLS; c++) {
                 tiles[r][c] = createTile();
             }
         }
+    }
+
+    public Tile[][] getMapTiles() {
+        return tiles;
     }
 }
