@@ -8,6 +8,7 @@
         <outputRelativeToContentRoot value="true" />
         <module name="Memento" />
         <module name="FlyWeight" />
+        <module name="Mediator" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
