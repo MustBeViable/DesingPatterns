@@ -1,0 +1,4 @@
+org/example/chatapp/ChatApp.class
+org/example/chatapp/mediator/SimpleChatMediator.class
+org/example/chatapp/client/ChatClientController.class
+org/example/chatapp/mediator/ChatMediator.class
